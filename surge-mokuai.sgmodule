@@ -9,17 +9,7 @@
 
 [Body Rewrite]
 # 瓜子漫画 - 隐藏广告占位框
-http-response ^https?:\/\/(www\.)?guazimanhua\.com\/(chapter|comic)\.php (<\/head>) "<style>
-div.mobile-reader-top-static-ad { 
-    display: none !important; 
-    height: 0 !important; 
-    min-height: 0 !important; 
-    overflow: hidden !important; 
-    margin: 0 !important; 
-    padding: 0 !important; 
-    border: 0 !important; 
-}
-</style>$1"
+http-response ^https?:\/\/(www\.)?guazimanhua\.com\/(chapter|comic)\.php (<\/head>) "<style>div.mobile-reader-top-static-ad,#guazi-ios-ad-image,[id^='QxrYf_'],.QxrYf_a,.QxrYf_c{display:none!important;height:0!important;min-height:0!important;overflow:hidden!important;pointer-events:none!important}</style>$1"
 
 [MITM]
 hostname = %APPEND% www.guazimanhua.com
