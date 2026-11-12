@@ -1,5 +1,5 @@
 #!name=自用广告净化
-#!desc=移除瓜子漫画站内广告脚本、图片及页面推广占位框
+#!desc=自用广告净化
 #!category=广告净化
 
 [URL Rewrite]
