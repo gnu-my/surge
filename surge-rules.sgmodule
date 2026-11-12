@@ -1,0 +1,18 @@
+#!name=自定义本地分流规则
+#!desc=包含分流与去广告规则
+#!category=分流规则
+
+[Rule]
+# 瓜子漫画
+DOMAIN-KEYWORD, xhsqd, REJECT
+DOMAIN-SUFFIX, ec766.com, REJECT
+DOMAIN-SUFFIX, youandmerunfast.com, REJECT
+DOMAIN-SUFFIX, safa88.com, REJECT
+DOMAIN-SUFFIX, guazimanhua.com, DIRECT
+
+# 红果短剧
+DOMAIN-KEYWORD, ad-sign, REJECT
+DOMAIN-KEYWORD, reading-ad, REJECT
+
+# Speedtest 测速
+DOMAIN-SUFFIX, speedtest.net, DIRECT
