@@ -9,9 +9,9 @@
 
 [Body Rewrite]
 # 瓜子漫画 - 隐藏广告占位框
-^https?:\/\/www\.guazimanhua\.com\/.* response-body "(<head.*?>)" "$1<style>.desktop-reader-top-ad,.pc-reader-bottom-image-spacer,.pc-reader-bottom-image-ad,.mobile-reader-top-static-ad,[aria-label="广告"]{display:none!important;height:0!important;margin:0!important;padding:0!important;}</style>"
+http-response ^https?:\/\/www\.guazimanhua\.com\/.* (<head[^>]*>) $1<style>.desktop-reader-top-ad,.pc-reader-bottom-image-spacer,.pc-reader-bottom-image-ad,.mobile-reader-top-static-ad,[aria-label="广告"]{display:none!important;height:0!important;margin:0!important;padding:0!important;}</style>
 
 
 
 [MITM]
-hostname = %APPEND% www.guazimanhua.com
+hostname = www.guazimanhua.com
