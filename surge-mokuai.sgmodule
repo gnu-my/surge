@@ -4,8 +4,9 @@
 
 [URL Rewrite]
 # 瓜子漫画 - 站内广告脚本与广告图片路径阻断
-^https?:\/\/www\.guazimanhua\.com\/assets\/reader\/mobile-.*-ad\.js$ _ reject
-^https?:\/\/www\.guazimanhua\.com\/assets\/ad\/ _ reject
+^https?:\/\/www\.guazimanhua\.com\/assets\/reader\/mobile-.*-ad\.js$ - reject-200
+^https?:\/\/www\.guazimanhua\.com\/assets\/ad\/ - reject-200
+
 
 [Body Rewrite]
 # 瓜子漫画 - 隐藏广告占位框
