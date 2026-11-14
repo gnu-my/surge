@@ -9,7 +9,7 @@
 
 [Body Rewrite]
 # 瓜子漫画 - 隐藏广告占位框
-http-response ^https?:\/\/www\.guazimanhua\.com\/.* (<head[^>]*>) $1<style>body{outline:5px solid red!important;}</style>
+http-response ^https?:\/\/www\.guazimanhua\.com\/.* (<head[^>]*>) $1<style>#guazi-mobile-js-ad-spacer,.desktop-reader-top-ad,.pc-reader-bottom-image-spacer,.pc-reader-bottom-image-ad,.mobile-reader-top-static-ad,[aria-label="广告"],[style*="z-index: 2147483646"][style*="position: fixed"],[style*="flex: 0 0 140px"],iframe[src*="damage_loop.html"]{display:none!important;width:0!important;height:0!important;min-height:0!important;max-height:0!important;margin:0!important;padding:0!important;border:0!important;}</style>
 
 
 
