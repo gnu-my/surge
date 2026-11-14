@@ -10,7 +10,7 @@
 
 [Body Rewrite]
 # 瓜子漫画 - 隐藏广告占位框
-http-response ^https?://.*guazimanhua\.com/.* (<head.*?>) $1<style>.desktop-reader-top-ad,.pc-reader-bottom-image-spacer,.pc-reader-bottom-image-ad,.mobile-reader-top-static-ad,[aria-label="广告"],#guazi-mobile-js-ad-spacer,[id$="90091"],iframe[id^="iframeid"],h5[class*="swiper-container"],img[src*="ACloudMerge"],[id*="top-ad"],[class*="top-ad"],[class*="header-ad"],[id*="banner"],[class*="banner-ad"],div[style*="position: fixed"][style*="top: 0"],div[style*="position:fixed"][style*="top:0"]{display:none!important;height:0!important;margin:0!important;padding:0!important;visibility:hidden!important;}</style>
+http-response ^https?://.*guazimanhua\.com/.* (<head.*?>) $1<style>.desktop-reader-top-ad,.pc-reader-bottom-image-spacer,.pc-reader-bottom-image-ad,.mobile-reader-top-static-ad,[aria-label="广告"],#guazi-mobile-js-ad-spacer,[id*="gsagewadw"],[id*="swipercontainer"],[id*="anceng"],[id*="anshua"],[id*="diantan"],[id*="alabelbox"],[id*="ababoxjia"],[id*="iframeid"],iframe[src*="r12ukq68l8"],img[src*="akosscdn"],[id*="top-ad"],[class*="top-ad"],[class*="header-ad"],[id*="banner"],[class*="banner-ad"],div[style*="position: fixed"][style*="top: 0"]{display:none!important;height:0!important;min-height:0!important;max-height:0!important;width:0!important;min-width:0!important;max-width:0!important;margin:0!important;padding:0!important;border:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;transform:scale(0)!important;overflow:hidden!important;}</style>
 
 
 [MITM]
