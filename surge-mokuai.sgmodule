@@ -4,8 +4,8 @@
 
 [URL Rewrite]
 # 1. 拦截生成广告的JS源头
-^https?://.*\.guazimanhua\.com/assets/reader/mobile-.*-ad\.js.* - reject-200
-^https?://.*\.guazimanhua\.com/assets/ads/.* - reject-200
+^https?:\/\/.*\.guazimanhua\.com\/assets\/(ads|reader\/(mobile-top-static-ad|mobile-bottom-ad|pc-common-banner|pc-reader-bottom-image|reading-event)|analytics\/baidu-tongji) url reject-200
+^https?:\/\/.*\.guazimanhua\.com\/free-comics\/mobile-bottom-ad-status\.php url reject-200
 
 [Body Rewrite]
 # 2. 隐藏残余占位符
