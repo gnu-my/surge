@@ -3,16 +3,13 @@
 #!category=广告净化
 
 [URL Rewrite]
-# 瓜子漫画 - 站内广告脚本与广告图片路径阻断
+# 1. 拦截生成广告的JS源头
 ^https?://.*\.guazimanhua\.com/assets/reader/mobile-.*-ad\.js.* - reject-200
 ^https?://.*\.guazimanhua\.com/assets/ads/.* - reject-200
-^https?://.*\.guazimanhua\.com/assets/reader/pc-reader-bottom-image\.js.* - reject-200
-
 
 [Body Rewrite]
-# 瓜子漫画 - 隐藏广告占位框
-http-response ^https?://.*\.guazimanhua\.com/.* (<head.*?>) $1<style>#guazi-mobile-js-ad-spacer,.mobile-reader-top-static-ad,.desktop-reader-top-ad,style[id^="guazi-mobile-top-ad"],.chTMLi,SCrWEc,h5[style*="141px"],h5[style*="fixed"],h5[style*="2147483647"],div[style*="z-index: 2147483647"][style*="fixed"],div[style*="z-index:2147483647"][style*="fixed"],img[src*="ACloudMerge"]{display:none!important;}</style>
-
+# 2. 隐藏残余占位符
+http-response ^https?://.*\.guazimanhua\.com/.* (<head.*?>) $1<style>.desktop-reader-top-ad,.pc-reader-bottom-image-spacer,.pc-reader-bottom-image-ad,.mobile-reader-top-static-ad,[aria-label="广告"],#guazi-mobile-js-ad-spacer{display:none!important;}</style>
 
 [MITM]
-hostname = www.guazimanhua.com
+hostname = *.guazimanhua.com
