@@ -4,13 +4,14 @@
 
 [URL Rewrite]
 # 瓜子漫画 - 站内广告脚本与广告图片路径阻断
-^https?://.*guazimanhua\.com/assets/reader/mobile-bottom-ad\.js.* - reject-200
-^https?://.*guazimanhua\.com/assets/ads/mobile-reader-bottom-creative.*\.js.* - reject-200
+^https?://.*\.guazimanhua\.com/assets/reader/mobile-.*-ad\.js.* - reject-200
+^https?://.*\.guazimanhua\.com/assets/ads/.* - reject-200
+^https?://.*\.guazimanhua\.com/assets/reader/pc-reader-bottom-image\.js.* - reject-200
 
 
 [Body Rewrite]
 # 瓜子漫画 - 隐藏广告占位框
-http-response ^https?://www\.guazimanhua\.com/.* (<head.*?>) $1<style>.desktop-reader-top-ad,.pc-reader-bottom-image-spacer,.pc-reader-bottom-image-ad,.mobile-reader-top-static-ad,[aria-label="广告"],#guazi-mobile-js-ad-spacer,[id$="90091"],iframe[id^="iframeid"],h5[class*="swiper-container"],img[src*="ACloudMerge"],[id*="top-ad"],[class*="top-ad"],[class*="header-ad"],[id*="banner"],[class*="banner-ad"],div[style*="position: fixed"][style*="top: 0"],div[style*="position:fixed"][style*="top:0"]{display:none!important;height:0!important;margin:0!important;padding:0!important;visibility:hidden!important;}</style>
+http-response ^https?://.*\.guazimanhua\.com/.* (<head.*?>) $1<style>#guazi-mobile-js-ad-spacer,.mobile-reader-top-static-ad,.desktop-reader-top-ad,style[id^="guazi-mobile-top-ad"],.chTMLi,SCrWEc,h5[style*="141px"],h5[style*="fixed"],h5[style*="2147483647"],div[style*="z-index: 2147483647"][style*="fixed"],div[style*="z-index:2147483647"][style*="fixed"],img[src*="ACloudMerge"]{display:none!important;}</style>
 
 
 [MITM]
